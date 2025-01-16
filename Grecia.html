@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Grecia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url("Grecia.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .button {
+            aspect-ratio: 1;
+            background-color: transparent;
+            display: flex;
+            position: absolute;
+            border:none;
+            cursor: pointer;
+            align-content: center;
+            margin: auto;
+            vertical-align: middle;
+        }
+        .button-city {
+            width: 1.2%;
+        }
+        .button-island {
+            width: 1.6%;
+        }
+
+        .marker {
+            width: 50%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            margin: 25%;
+        }
+        .marker-city {
+            background-color: #00e0f0;
+        }
+        .marker-island {
+            background-color: #f0b400;
+        }
+ 
+        .info {
+            margin: 5%;
+            padding: 1%
+        }
+        h1 {
+            margin-bottom: 4px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <button class="button button-city" popovertarget="Atenas-texto"  style="margin-left: 39.3%; margin-top: 29.2%">
+        <span id="Atenas" class="marker marker-city"></span>
+    </button>
+    <button class="button button-city" popovertarget="Corinto-texto" style="margin-left: 33.5%; margin-top: 29.9%">
+        <span id="Corinto" class="marker marker-city"></span>
+    </button>
+    <button class="button button-city" popovertarget="Esparta-texto" style="margin-left: 30.4%; margin-top: 36.8%">
+        <span id="Esparta" class="marker marker-city"></span>
+    </button>
+    <button class="button button-city" popovertarget="Tebas-texto" style="margin-left: 36.1%; margin-top: 26.7%">
+        <span id="Tebas" class="marker marker-city"></span>
+    </button>
+    <button class="button button-city" popovertarget="Delfos-texto" style="margin-left: 31.1%; margin-top: 24.6%">
+        <span id="Delfos" class="marker marker-city"></span>
+    </button>
+    <button class="button button-city" popovertarget="Olimpia-texto" style="margin-left: 24.9%; margin-top: 31.4%">
+        <span id="Olimpia" class="marker marker-city"></span>
+    </button>
+    
+    <button class="button button-island" popovertarget="Chipre-texto" style="margin-left: 96.4%; margin-top: 52.7%">
+        <span id="Chipre" class="marker marker-island"></span>
+    </button>
+    <button class="button button-island" popovertarget="Creta-texto" style="margin-left: 46%; margin-top: 51.1%">
+        <span id="Creta" class="marker marker-island"></span>
+    </button>
+    <button class="button button-island" popovertarget="Lesbos-texto" style="margin-left: 55.5%; margin-top: 20%">
+        <span id="Lesbos" class="marker marker-island"></span>
+    </button>
+    <button class="button button-island" popovertarget="Quíos-texto" style="margin-left: 53.7%; margin-top: 25.6%">
+        <span id="Quíos" class="marker marker-island"></span>
+    </button>
+    <button class="button button-island" popovertarget="Salamina-texto" style="margin-left: 37.5%; margin-top: 29.7%; width:1%">
+        <span id="Salamina" class="marker marker-island"></span>
+    </button>
+    <button class="button button-island" popovertarget="Naxos-texto" style="margin-left: 49.9%; margin-top: 36.4%">
+        <span id="Naxos" class="marker marker-island"></span>
+    </button>
+
+
+    <div popover id="Atenas-texto" class="info">
+        <h1>Atenas</h1>
+        <p>A menudo considerado el lugar de nacimiento de la democracia y la Civilización Occiendtal, Atenas estableció un sistema democrático en 508 a.E.C después del fin de la tiranía de Iságoras, que duró 180 años con poca interrupción.</p>
+    </div>
+    <div popover id="Corinto-texto" class="info">
+        <h1>Corinto</h1>
+        <p>Situada por la mitad de Atenas y Esparta, Corinto era una de las otras ciudades más importantes de la época. Fue arrasado por los romanos en 146 a.E.C para subyugar a los griegos, y reconstruido en 44 a.E.C y usado después como la capital provincial.</p>
+    </div>
+    <div popover id="Esparta-texto" class="info">
+        <h1>Esparta</h1>
+        <p>Según la leyenda, la ciudad fue fundada en los 900s a.E.C por Lacedemón - un hijo de Zeus y la ninfa Táigete. Lacedemón se casó con Esparta, y llamó la ciudad por ella, y la región por él.</p>
+    </div>
+    <div popover id="Tebas-texto" class="info">
+        <h1>Tebas</h1>
+        <p>En Tebas tiene lugar la historia y la profecía de Laius, Jocasta, y Oedipus, un mito muy conocido usado en las Tragedias Tebas de Sófocles.</p>
+    </div>
+    <div popover id="Delfos-texto" class="info">
+        <h1>Delfos</h1>
+        <p>En la mitología griega antigua, Zeus lanzó dos águilas iguales de los dos extremos del mundo, y se conocían en la zona de Delfos, y por eso, decidió que es el centro del mundo, y lo marcó con la piedra el Omphalos de Delfos.</p>
+    </div>
+    <div popover id="Olimpia-texto" class="info">
+        <h1>Olimpia</h1>
+        <p>Olimpia es el lugar del santuario panhelénico más importante: el Altis, dedicado a Zeus. En este sitio tuvieron lugar los Juegos Olímpicos en la Antigüedad.</p>
+    </div>
+
+    <div popover id="Chipre-texto" class="info">
+        <h1>Chipre</h1>
+        <p>Chipre fue ocupado por los de Grecia por primera vez en ~1600 a.E.C por los micénicos. Por estar ubicada bastante lejos de Grecia y de otros lugares en el meditarráneo, cambió de dueño a menudo durante la historia, entre los fenicios y los griegos, los egipcios, los hititas, y por supuesto los persas.</p>
+    </div>
+    <div popover id="Creta-texto" class="info">
+        <h1>Creta</h1>
+        <p>La civilización minoica vivía principalmente en la isla de Creta entre hasta la invasión de los micénicos en el siglo XVI a.E.C. Durante la época clásica, conservaba parte de la cultura arcaica, y no tuvo parte en los grandes conflictos del periodo como las Guerras Médicas.</p>
+        </p>
+    </div>
+    <div popover id="Lesbos-texto" class="info">
+        <h1>Lesbos</h1>
+        <p>La isla de Lesbos es más famosa por la poetisa Safo. Ella crecía y vivía en la isla durante la época arcaica, y escribía sobre su amor hacia las mujeres. De este origen vienen las palabras lesbiana y safismo.</p>
+    </div>
+    <div popover id="Quíos-texto" class="info">
+        <h1>Quíos</h1>
+        <p>Quíos: En la mitología, el nombre Quíos viene de Quío, un hijo de Poseidón que nació durante mucha nieve - χιών (chiōn) en el griego antiguo.</p>
+    </div>
+    <div popover id="Salamina-texto" class="info">
+        <h1>Salamina</h1>
+        <p>Situada al lado del continente y entre Atenas y el Peloponeso, la isla era un lugar estratégico durante la antigüedad. El ejemplo más ilustrativo de esto es la llamada batalla de Salamina, entre los estados-ciudades griegos y el imperio persio, durante lo cual el pueblo ateniense huyó a la isla.</p>
+    </div>
+    <div popover id="Naxos-texto" class="info">
+        <h1>Naxos</h1>
+        <p>Según algunos relatos del mito, Zeus creció en una cueva - ahora llamada la Cueva de Zas (Zeus) en Naxos, para esconderse de su padre Cronos.</p>
+    </div>
+</body>
+</html>
